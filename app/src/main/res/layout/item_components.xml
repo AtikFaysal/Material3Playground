@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="@dimen/margin_8"
+    android:layout_marginVertical="@dimen/margin_5"
+    app:cardCornerRadius="@dimen/five"
+    app:cardElevation="@dimen/two"
+    android:elevation="@dimen/two"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Buttons"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingVertical="@dimen/padding_5"
+        android:layout_marginVertical="@dimen/margin_5"
+        android:textSize="@dimen/regular_text_size"
+        android:textColor="@color/black"
+        android:paddingHorizontal="@dimen/padding_8" />
+
+
+</androidx.cardview.widget.CardView>

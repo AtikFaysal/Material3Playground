@@ -1,20 +1,32 @@
+import com.playground.AppConfig
+
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
+    id("android.application")
+    id("android.hilt")
+    alias(libs.plugins.kotlin.android)
+    id("android.navigation")
 }
 
 android {
-    namespace = "com.playground.material"
-    compileSdk = 34
+    namespace = AppConfig.applicationId
+    compileSdk = AppConfig.compileSdkVersion
 
     defaultConfig {
-        applicationId = "com.playground.material"
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = AppConfig.applicationId
+        minSdk = AppConfig.minimumSdkVersion
+        targetSdk = AppConfig.targetSdkVersion
+        versionCode = AppConfig.versionCode
+        versionName = AppConfig.versionName
+        testInstrumentationRunner = AppConfig.testInstrumentationRunner
+    }
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    signingConfigs {
+        create("release") {
+            storeFile = file("app-signature/dmtcl.jks")
+            storePassword = "123456"
+            keyAlias = "dmtcl"
+            keyPassword = "123456"
+        }
     }
 
     buildTypes {
@@ -26,23 +38,32 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
+
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
     }
 }
 
 dependencies {
+    with(libs){
+        implementation(dateced)
+        implementation(bundles.androidx.core.dependencies)
+        implementation(bundles.androidx.lifecycle.dependencies)
+        implementation(view.state.layout)
+        implementation(bundles.rxjava3.dependencies)
+        implementation(bundles.androidx.navigation.dependencies)
+        debugImplementation(leakcanary)
+        implementation(timber)
+        implementation(libs.picasso)
+        implementation(libs.cirlce.imageview)
+        implementation(libs.custom.view)
+        implementation(libs.cirlce.imageview)
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+        implementation(libs.bundles.android.responsive.size.dependencies)
+
+        testImplementation(test.junit)
+        androidTestImplementation(test.extjunit)
+        androidTestImplementation(test.espresso)
+    }
 }

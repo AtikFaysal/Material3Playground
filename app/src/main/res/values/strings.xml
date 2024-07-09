@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">MaterialPlayground</string>
+    <string name="app_name">MUI</string>
+
+    <string name="title_all_component">All component</string>
 </resources>
