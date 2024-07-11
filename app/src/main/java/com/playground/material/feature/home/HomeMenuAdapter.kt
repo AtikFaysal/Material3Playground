@@ -1,4 +1,4 @@
-package com.playground.material.home
+package com.playground.material.feature.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

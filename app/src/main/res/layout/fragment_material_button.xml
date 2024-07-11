@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/toolbarIncl"
+        layout="@layout/common_toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:id="@+id/elevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:rippleColor="@color/color_DBDBDB"
+        android:layout_marginHorizontal="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/btn_elevated_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/elevatedIconButton"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarIncl"/>
+
+    <Button
+        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+        android:id="@+id/elevatedIconButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="textEnd"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/margin_5"
+        android:text="@string/btn_elevated_button"
+        app:layout_constraintStart_toEndOf="@+id/elevatedButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/elevatedButton"
+        app:layout_constraintBottom_toBottomOf="@+id/elevatedButton"/>
+
+    <Button
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:id="@+id/elevatedStrokeButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:strokeColor="@color/black"
+        app:strokeWidth="@dimen/one"
+        app:elevation="1dp"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/btn_elevated_button"
+        app:layout_constraintStart_toStartOf="@+id/elevatedButton"
+        app:layout_constraintEnd_toEndOf="@+id/elevatedIconButton"
+        app:layout_constraintTop_toBottomOf="@+id/elevatedButton"/>
+
+    <Button
+        android:id="@+id/filledButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_5"
+        android:text="@string/btn_filled_button"
+        app:layout_constraintStart_toStartOf="@+id/elevatedButton"
+        app:layout_constraintEnd_toStartOf="@+id/filledIconButton"
+        app:layout_constraintTop_toBottomOf="@+id/elevatedStrokeButton"/>
+
+    <Button
+        android:id="@+id/filledIconButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.Button.Icon"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="textStart"
+        android:text="@string/btn_filled_button"
+        app:layout_constraintStart_toEndOf="@+id/filledButton"
+        app:layout_constraintEnd_toEndOf="@+id/elevatedIconButton"
+        app:layout_constraintTop_toTopOf="@+id/filledButton"
+        app:layout_constraintBottom_toBottomOf="@+id/filledButton"/>
+
+    <Button
+        android:id="@+id/filledTonalButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_5"
+        android:text="@string/btn_filled_tonal_button"
+        app:layout_constraintStart_toStartOf="@+id/elevatedButton"
+        app:layout_constraintEnd_toStartOf="@+id/filledTonalIconButton"
+        app:layout_constraintTop_toBottomOf="@+id/filledButton"/>
+
+    <Button
+        android:id="@+id/filledTonalIconButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.Button.TonalButton.Icon"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="textStart"
+        app:iconTint="@color/colorPrimary"
+        android:text="@string/btn_filled_tonal_button"
+        app:layout_constraintStart_toEndOf="@+id/filledTonalButton"
+        app:layout_constraintEnd_toEndOf="@+id/elevatedIconButton"
+        app:layout_constraintTop_toTopOf="@+id/filledTonalButton"
+        app:layout_constraintBottom_toBottomOf="@+id/filledTonalButton"/>
+
+    <Button
+        android:id="@+id/outlineButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_5"
+        android:text="@string/btn_outline_button"
+        app:layout_constraintStart_toStartOf="@+id/elevatedButton"
+        app:layout_constraintEnd_toStartOf="@+id/outlineIconButton"
+        app:layout_constraintTop_toBottomOf="@+id/filledTonalButton"/>
+
+    <Button
+        android:id="@+id/outlineIconButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="textStart"
+        app:iconTint="@color/colorPrimary"
+        android:text="@string/btn_outline_button"
+        app:layout_constraintStart_toEndOf="@+id/outlineButton"
+        app:layout_constraintEnd_toEndOf="@+id/elevatedIconButton"
+        app:layout_constraintTop_toTopOf="@+id/outlineButton"
+        app:layout_constraintBottom_toBottomOf="@+id/outlineButton"/>
+
+
+    <Button
+        android:id="@+id/textButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_5"
+        android:text="@string/btn_outline_button"
+        app:layout_constraintStart_toStartOf="@+id/elevatedButton"
+        app:layout_constraintEnd_toStartOf="@+id/outlineIconButton"
+        app:layout_constraintTop_toBottomOf="@+id/outlineButton"/>
+
+    <Button
+        android:id="@+id/textIconButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.Button.TextButton.Icon"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="textStart"
+        app:iconTint="@color/colorPrimary"
+        android:text="@string/btn_outline_button"
+        app:layout_constraintStart_toEndOf="@+id/textButton"
+        app:layout_constraintEnd_toEndOf="@+id/elevatedIconButton"
+        app:layout_constraintTop_toTopOf="@+id/textButton"
+        app:layout_constraintBottom_toBottomOf="@+id/textButton"/>
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        app:layout_constraintTop_toBottomOf="@+id/textButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <Button
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 1"
+            />
+        <Button
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 2"
+            />
+        <Button
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 3"
+            />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleIconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <Button
+            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+            android:id="@+id/iconButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_add"/>
+        <Button
+            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+            android:id="@+id/iconButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_add"/>
+        <Button
+            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+            android:id="@+id/iconButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_add"/>
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

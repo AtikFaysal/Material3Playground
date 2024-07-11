@@ -2,4 +2,13 @@
     <string name="app_name">MUI</string>
 
     <string name="title_all_component">All component</string>
+
+
+    <string name="btn_elevated_button">Elevated Button</string>
+    <string name="btn_filled_button">Filled Button</string>
+    <string name="btn_filled_tonal_button">Filled tonal Button</string>
+    <string name="btn_outline_button">Outline Button</string>
+
+
+    <string name="title_button">Button</string>
 </resources>

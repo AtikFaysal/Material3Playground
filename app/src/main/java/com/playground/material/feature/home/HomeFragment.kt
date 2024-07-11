@@ -1,9 +1,10 @@
-package com.playground.material.home
+package com.playground.material.feature.home
 
 import android.os.Bundle
 import androidx.core.view.isVisible
 import com.playground.material.R
 import com.playground.material.core.common.base.BaseFragment
+import com.playground.material.core.common.extfun.navigateDestination
 import com.playground.material.core.common.extfun.setUpGridRecyclerView
 import com.playground.material.core.model.ComponentsEntity
 import com.playground.material.databinding.FragmentHomeBinding
@@ -19,7 +20,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(){
             backBtn.isVisible = false
         }
         val adapter = HomeMenuAdapter {
-
+            when(it){
+                1 -> navigateDestination(HomeFragmentDirections.actionHomeFragmentToMaterialButtonFragment())
+            }
         }
 
         requireActivity().setUpGridRecyclerView(binding.servicesRv, adapter, 2)

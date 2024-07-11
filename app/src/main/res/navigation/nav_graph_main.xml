@@ -3,13 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_main"
-    app:startDestination="@id/homeFragment2">
-
+    app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/homeFragment2"
-        android:name="com.playground.material.home.HomeFragment"
+        android:id="@+id/homeFragment"
+        android:name="com.playground.material.feature.home.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_materialButtonFragment"
+            app:destination="@id/materialButtonFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/materialButtonFragment"
+        android:name="com.playground.material.feature.components.MaterialButtonFragment"
+        android:label="MaterialButtonFragment"
+        tools:layout="@layout/fragment_material_button"/>
 
 </navigation>
